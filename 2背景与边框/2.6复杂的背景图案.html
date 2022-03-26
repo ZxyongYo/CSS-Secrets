@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        background: #999;
+      }
+      .box{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        background-image: 
+          linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 0),
+          linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+        background-size: 30px 30px;
+      }
+      .box1{
+        width: 200px;
+        height: 200px;
+        background-color: #58a;
+        background-image: 
+          linear-gradient(90deg, white 1px, transparent 0),
+          linear-gradient(white 1px, transparent 0);
+        background-size: 30px 30px;
+      }
+      .box2{
+        width: 200px;
+        height: 200px;
+        background-color: #58a;
+        background-image: 
+          linear-gradient(white 2px, transparent 0),
+          linear-gradient(90deg, white 2px, transparent 0),
+          linear-gradient(rgba(255,255,255,.3) 1px, transparent 0),
+          linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 0);
+        background-size: 
+          45px 45px,
+          45px 45px,
+          15px 15px,
+          15px 15px;
+      }
+      .box3{
+        width: 200px;
+        height: 200px;
+        background: #655;
+        background-image: 
+          radial-gradient(tan 30%, transparent 0),
+          radial-gradient(tan 30%, transparent 0);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+      }
+      .box4{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
+      }
+      .box5{
+        width: 200px;
+        height: 200px;
+        background: repeating-conic-gradient(#bbb 0, #bbb 25%, #eee 0, #eee 50%);
+        background-size: 30px 30px;
+      }
+      .box7{
+        width: 1200px;
+        height: 300px;
+        background: hsl(20, 40%, 90%);
+        background-image:
+          linear-gradient(90deg, #fb3 11px, transparent 0),
+          linear-gradient(90deg, #ab4 23px, transparent 0),
+          linear-gradient(90deg, #655 41px, transparent 0);
+        background-size: 41px 100%, 61px 100%, 83px 100%;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+  </body>
+</html>

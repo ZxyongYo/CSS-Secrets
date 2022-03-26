@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .box{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: deepskyblue;
+        border: 20px solid rgba(200,200,200, .3);
+        
+        /* 初始值为border-box，背景会被元素的边框的外沿线裁切掉，这样透明边框无法正常显示
+            将它设置为padding-box，浏览器就会使用内边距的外沿来把背景裁掉 */
+        background-clip: padding-box; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+      }
+      /* 水平条纹 */
+      .box{
+        width: 200px;
+        height: 200px;
+        /*
+          如果多个色标具有相同的位置，它们会产生一个无限小的过渡区域，
+          过渡的起止色分别是第一个和最后一个指定值。从效果上看，颜色会在那
+          个位置突然变化，而不是一个平滑的渐变过程；
+          如果某个色标的位置比整个列表中在他之前的色标位置都要小
+          则该色标的位置会被设置为它前面所有色标位置值的最大值；
+        */
+        background: linear-gradient(deepskyblue 50%, deeppink 0);
+        background-size: 100% 20px;
+      }
+      /* 垂直条纹 */
+      .box{
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(90deg, deepskyblue 0 50%, deeppink 0);
+        background-size: 20px 100%;
+      }
+      /* 斜向条纹 repeating-linear-gradient */
+      .box1{
+        width: 200px;
+        height: 200px;
+        /* background: repeating-linear-gradient(60deg, 
+                  deepskyblue, deepskyblue 15px,
+                  deeppink 0, deeppink 30px); */
+        background: repeating-linear-gradient(60deg,
+                      deepskyblue 0 15px,
+                      deeppink 0 30px) 
+      }
+      /* 同色系的条纹 */
+      .box2{
+        width: 200px;
+        height: 200px;
+        background: deepskyblue;
+        background-image: repeating-linear-gradient(30deg,
+                        rgba(255,255,255,.3) 0 15px,
+                        transparent 0 30px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">垂直/水平条纹</div>
+    <div class="box1">斜向条纹</div>
+    <div class="box2">同色系条纹</div>
+  </body>
+</html>

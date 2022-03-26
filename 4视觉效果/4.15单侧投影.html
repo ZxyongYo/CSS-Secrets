@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    /* 单侧投影
+      box-shadow: x轴偏移量 y轴偏移量 模糊半径 扩张半径 颜色;
+      使用 5px 的模糊半径,投影的尺寸会比元素本身大 约10px
+      扩张半径会根据设置的值扩大或(指定为负值时)缩小投影的尺寸,
+      一个 -5px 的扩张半径会把投影的宽高各减少 10px (每边5px) */
+    .box{
+      width: 200px;
+      height: 200px;
+      background: deepskyblue;
+      box-shadow: 0 5px 5px -5px black;
+    }
+    /* 把一个 black、10px 的投影设置到右侧和底部 */
+    .box1{
+      width: 200px;
+      height: 200px;
+      background: deepskyblue;
+      box-shadow: 5px 5px 10px -5px black;
+    }
+    /* 设置左右两侧投影 */
+    .box2{
+      width: 200px;
+      height: 200px;
+      background: deepskyblue;
+      box-shadow: 
+        -5px 0 5px -5px black, 
+        5px 0 5px -5px black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background: deepskyblue;
+      transform: skew(-15deg)
+    }
+    .button{
+      display: block;
+      width: 200px;
+      height: 200px;
+      background: deepskyblue;
+      transform: skew(-15deg);
+      color: white;
+      text-decoration: none;
+    }
+    .button .box1{
+      transform: skew(15deg);
+    }
+    .box2{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+    }
+    .box2::after{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: deepskyblue;
+      transform: skew(-15deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">skew make a parallelogram</div>
+  <a href="#" class="button">
+    <div class="box1">skew make a parallelogram</div>
+  </a>
+  <div class="box2">skew make a parallelogram</div>
+</body>
+</html>

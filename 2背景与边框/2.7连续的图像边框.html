@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        background: #999;
+      }
+      .box{
+        padding: 1em;
+        width: 200px;
+        height: 200px;
+        border: 1em solid transparent;
+        background: 
+          linear-gradient(white, white) padding-box, 
+          url(../images/1647487338.jpg) border-box 0 / cover;
+        /* background-origin: padding-box, border-box; 背景从边框开始，边框内部还是填充内部
+        background-clip: padding-box, border-box; 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面
+        background-size: cover; */
+      }
+      .box1{
+        width: 200px;
+        height: 200px;
+        border: 16px solid transparent;
+        border-image: repeating-linear-gradient(-45deg,
+          red 0 1em,
+          transparent 0 2em,
+          #58a 0 3em,
+          transparent 0 4em 
+        );
+        border-image-slice: 16;
+      }
+      .box2{
+        width: 200px;
+        height: 200px;
+        border: 1px solid transparent;
+        background:
+          linear-gradient(white, white) padding-box,
+          repeating-linear-gradient(-45deg,
+            black 0 25%,
+            white 0 50%
+          ) 0 / .6em .6em;
+        animation: ants 12s linear infinite;
+      }
+      .box3{
+        width: 200px;
+        height: 200px;
+        background: #fff;
+        border-top: .2em solid transparent;
+        border-image: linear-gradient(90deg, black 5em, transparent 0);
+        border-image-slice: 100% 0 0;
+      }
+
+      @keyframes ants {
+        to { background-position: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>
