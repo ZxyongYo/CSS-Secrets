@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    .img{
+      transition: .5s filter;
+      filter: sepia(1) saturate(4) hue-rotate(295deg);
+    }
+    .img:hover{
+      filter: none;
+    }
+
+    .box{
+      background: hsl(335, 100%, 50%);
+      transition: .5s background-color;
+    }
+    .box .img1{
+      display: block;
+      mix-blend-mode: luminosity;
+    }
+    .box:hover{
+      background: transparent;
+    }
+
+    .box1{
+      width: 195px;
+      height: 125px;
+      background: url('../images/tiger.jpg') no-repeat 0 / cover;
+      background-color: hsl(335, 100%, 50%);
+      background-blend-mode: luminosity;
+      transition: .5s background-color;
+    }
+    .box1:hover{
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <img class="img" src="../images/tiger.jpg" >
+
+  <div class="box">
+    <img class="img1" src="../images/tiger.jpg" >
+  </div>
+
+  <div class="box1">
+  </div>
+</body>
+</html>

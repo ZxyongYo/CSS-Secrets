@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0 20%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+      background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
+      font: 150%/1.6 Baskerville, Palatino, serif;
+    }
+    main{
+      position: relative;
+      padding: 40px;
+      border-radius: 10px;
+      background: hsla(0, 0%, 100%, .3);
+      overflow: hidden;
+    }
+    main::after{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0; right: 0; bottom: 0; left: 0;
+      margin: -20px;
+      background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
+      filter: blur(10px);
+    }
+    blockquote { font-style: italic }
+    blockquote cite { font-style: normal; }
+  </style>
+</head>
+<body>
+  <main>
+    <blockquote>
+    "Don't give up. Just try your best. Every time you move your mouth, Your memory will deepen, Your muscles will strengthen, And your confidence will awaken. You will make it."
+      <footer>－
+        <cite>
+        Oscar Wilde,
+        The Picture of Dorian Gray
+        </cite>
+      </footer>
+    </blockquote>
+   </main>
+</body>
+</html>

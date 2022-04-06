@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      border: 10px dotted deepskyblue;
+      /* box-shadow: 5px 5px 10px black; */
+      filter: drop-shadow(5px 5px 5px deepskyblue);
+
+      /* clip-path 会把投影也裁切掉 */
+      /* clip-path: polygon(
+        15px 0, 
+        calc(100% - 15px) 0, 
+        100% 15px, 
+        100% calc(100% - 15px),
+        calc(100% - 15px) 100%,
+        15px 100%,
+        0 calc(100% - 15px),
+        0 15px);  */
+    }
+    .box1{
+      position: relative;
+      width: 200px;
+      height: 100px;
+      background: deepskyblue;
+      border-radius: 10px;
+      filter: drop-shadow(.1em .1em .2em rgba(0,0,0,.5));
+    }
+    .box1::after{
+      content: "";
+      position: absolute;
+      top: 1em;
+      right: -.8em;
+      width: 0;
+      height: 0;
+      border: 1em solid transparent;
+      border-left-color: deepskyblue;
+      border-right-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box1"></div>
+</body>
+</html>
