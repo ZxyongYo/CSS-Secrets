@@ -7,6 +7,7 @@
   <title>Document</title>
   <style>
     body {
+      position: relative;
       margin: 0;
       padding: 0 20%;
       display: flex;
@@ -15,6 +16,17 @@
       height: 100vh;
       background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
       font: 150%/1.6 Baskerville, Palatino, serif;
+      overflow: hidden;
+    }
+    body::before{
+      content: '';
+      position: absolute;
+      top: calc(var(--y) * 1px - 100px);
+      left: calc(var(--x) * 1px - 100px);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 999vw rgba(0,0,0,.5);
     }
     main{
       position: relative;
@@ -22,8 +34,9 @@
       border-radius: 10px;
       background: hsla(0, 0%, 100%, .3);
       overflow: hidden;
+      backdrop-filter: blur(10px);
     }
-    main::after{
+    /* main::after{
       content: "";
       position: absolute;
       z-index: -1;
@@ -31,7 +44,7 @@
       margin: -20px;
       background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
       filter: blur(10px);
-    }
+    } */
     blockquote { font-style: italic }
     blockquote cite { font-style: normal; }
   </style>
@@ -49,4 +62,14 @@
     </blockquote>
    </main>
 </body>
+
+<script>
+  window.onload = function () {
+    const body = document.querySelector('body')
+    body.addEventListener('mousemove', e => {
+      body.style.setProperty('--x', e.x)
+      body.style.setProperty('--y', e.y)
+    })
+  }
+</script>
 </html>
