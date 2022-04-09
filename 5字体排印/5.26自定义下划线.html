@@ -13,7 +13,9 @@
       justify-content: space-around;
       height: 100vh;
     }
-    .box{
+    .box,
+    .box1,
+    .box2{
       width: 150px;
       line-height: 1.5em;
       text-align: justify;
@@ -24,10 +26,35 @@
       text-shadow: .05em 0 white, -.05em 0 white;
       text-decoration: none;
     }
+
+    .box1 a {
+      background: 
+        linear-gradient(-45deg, transparent 40%, red 0, red 60%, transparent 0) 0 1.2em,
+        linear-gradient(45deg, transparent 40%, red 0, red 60%, transparent 0) .1em 1.2em;
+      background-repeat: repeat-x;
+      background-size: .2em .1em;
+      text-shadow: .05em 0 white, -.05em 0 white;
+      text-decoration: none;
+    }
+    
+    .box2 a {
+      text-decoration: underline;
+      text-decoration-color: red;
+      text-decoration-style: wavy;
+      text-underline-position: under;
+    }
   </style>
 </head>
 <body>
   <div class="box">
+    The only way to <a>get rid of a temptation</a> is to <a>yield</a> to it.
+  </div>
+  
+  <div class="box1">
+    The only way to <a>get rid of a temptation</a> is to <a>yield</a> to it.
+  </div>
+
+  <div class="box2">
     The only way to <a>get rid of a temptation</a> is to <a>yield</a> to it.
   </div>
 </body>
