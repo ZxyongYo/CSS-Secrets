@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+      background: deepskyblue;
+    }
+    /* 使用box-shadow 生成一个超大的投影 模拟遮罩
+      box-shadow 无法阻止或与鼠标交互*/
+    .box{
+      width: 200px;
+      height: 200px;
+      background: deeppink;
+      transition: .5s linear;
+    }
+    .box.mask{
+      box-shadow: 0 0 0 100vmax rgba(0,0,0,.7);
+    }
+
+    dialog{
+      width: 200px;
+      height: 200px;
+      background: yellowgreen;
+      border: none;
+    }
+    dialog::backdrop{
+      background: rgba(0,0,0,.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onclick="this.classList.toggle('mask')"></div>
+
+  <button onclick="document.querySelector('dialog').showModal()">dialog</button>
+  <dialog>
+    this is a dialog
+    <button onclick="this.parentNode.close()">close</button>
+  </dialog>
+</body>
+</html>

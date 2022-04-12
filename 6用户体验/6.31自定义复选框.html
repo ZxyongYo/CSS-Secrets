@@ -19,20 +19,22 @@
     }
     /* 隐藏原生checkbox */
     input[type="checkbox"]{
-      position: absolute;
-      clip: rect(0,0,0,0);
+      display: none;
+    }
+    input[type="checkbox"] + label{
+      display: flex;
+      align-items: center;
     }
     input[type="checkbox"] + label::before {
       content: "\a0";
-      display: inline-block;
-      vertical-align: .1em;
+      display: block;
       width: .8em;
       height: .8em;
       margin-right: .2em;
       border-radius: .2em;
       background: silver;
       text-indent: .15em;
-      line-height: .65;
+      line-height: .5;
     }
     input[type="checkbox"]:checked + label::before {
       content: '\2713';
