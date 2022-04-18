@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+    }
+
+    figure{
+      margin: auto;
+      padding: 1em;
+      /* min-content 这个关键字将解析为这个容器内部最大的不可断行元素的宽度
+        （即最宽的单词、图片或具有固定宽度的盒元素）
+        类似的还有max-content,它的行为类似于dispaly:inline-block;
+        fit-content行为通常与浮动元素相同 */
+      width: min-content;
+      border: 1px solid #333;
+    }
+    figure > img {
+      max-width: inherit;
+    }
+  </style>
+</head>
+<body>
+  <p>Some text [...]</p>
+  <figure>
+    <img src="http://csssecrets.io/images/adamcatlace.jpg" />
+    <figcaption>
+      The great Sir Adam Catlace was named after
+      Countess Ada Lovelace, the first programmer.
+    </figcaption>
+  </figure>
+  <p>More text [...].</p>
+</body>
+</html>
