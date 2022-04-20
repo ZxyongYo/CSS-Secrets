@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .loader{
+      width: 100px;
+      height: 100px;
+      background: url('http://dabblet.com/img/loader.png') 0 0;
+      /* step(8) 把动画分成8帧 逐帧切换 */
+      animation: loader 1s infinite steps(8);
+    }
+    @keyframes loader {
+      to { background-position: -800px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+</body>
+</html>

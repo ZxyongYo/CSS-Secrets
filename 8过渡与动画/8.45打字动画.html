@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1{
+      font: bold 200% Consolas, Monaco, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .05em solid;
+      animation: 
+        typing 8s steps(15),
+        caret 1s steps(1) infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+    }
+
+    @keyframes caret {
+      50% { border-right-color: transparent }
+    }
+  </style>
+</head>
+<body>
+  <h1>Css is awesome!</h1>
+
+  <script>
+    const h1 = document.querySelector('h1')
+    const s = h1.innerText.length
+    // 1ch 等于 一个等宽字符的宽度
+    h1.style.width = s + 'ch'
+    h1.style.animationTimingFunction = `steps(${s}), steps(1)`
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 80vh;
+    }
+    .ball {
+      width: 100px;
+      height: 100px;
+      background: deepskyblue;
+      border-radius: 50%;
+      animation: bounce 1s cubic-bezier(.1,.25,1,.25) forwards;
+    }
+    @keyframes bounce {
+      60%, 80%, to {
+        transform: translateY(400px);
+        animation-timing-function: ease;
+      }
+      70% {
+        transform: translateY(300px);
+      }
+      90% {
+        transform: translateY(360px);
+      }
+    }
+
+    label{
+      position: relative;
+    }
+    label input{
+      display: block;
+      padding: .2em;
+    }
+    label input:not(:focus) + .callout{
+      transform: scale(0);
+      transition: .25s transform;
+    }
+    .callout {
+      position:absolute;
+      margin-top: .5em;
+      padding: .5em;
+      max-width: 14em;
+      background: #fed;
+      border-radius: .3em;
+      border: 1px solid rgba(0,0,0,.3);
+      box-shadow: .05em .2em .6em rgba(0,0,0,.2);
+      transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+      transform-origin: 1.4em -.4em;
+      font-size: 75%;
+    }
+    .callout::before{
+      content: "";
+      position: absolute;
+      top: -.35em;
+      left: 1em;
+      padding: .35em;
+      background: inherit;
+      border: inherit;
+      border-right: 0;
+      border-bottom: 0;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+
+  <label>
+    Your name: <input type="text" id="username">
+    <span class="callout">
+      Only letters, numbers,underscores (_) and hyphens (-)
+    </span>
+  </label>
+</body>
+</html>
